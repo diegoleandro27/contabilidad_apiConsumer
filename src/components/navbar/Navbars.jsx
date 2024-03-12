@@ -12,6 +12,8 @@ const navigation = [
   { name: "Registro de Asientos", href: "/registroAsiento", current: false },
   { name: "Tipo de cuentas", href: "/tipoCuenta", current: false },
   { name: "Cuentas Contables", href: "/cuentasContables", current: false },
+  { name: "Tipos de Moneda", href: "/tiposMoneda", current: false },
+  { name: "Auxiliar", href: "/auxiliar", current: false }
 ];
 
 function classNames(...classes) {

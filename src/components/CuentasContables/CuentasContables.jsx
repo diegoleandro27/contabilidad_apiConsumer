@@ -7,7 +7,7 @@ const CuentasContables = () => {
   const [nuevaCuentaDescripcion, setNuevaCuentaDescripcion] = useState("");
   const [cuentaAEditar, setCuentaAEditar] = useState(null);
 
-  const server = "api-contabilidad.azurewebsites.net";
+  const server = "ap1-contabilidad.azurewebsites.net";
 
   const fetchCuentasContables = async () => {
     try {

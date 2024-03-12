@@ -7,11 +7,13 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import {
+  Auxiliar,
   CuentasContables,
   Home,
   Navbars,
   RegistroAsiento,
   TipoCuentas,
+  TiposMoneda,
 } from "./components";
 
 const AppLayout = () => (
@@ -28,6 +30,8 @@ const router = createBrowserRouter(
       <Route path="/registroAsiento" element={<RegistroAsiento />} />
       <Route path="/cuentasContables" element={<CuentasContables />} />
       <Route path="/tipoCuenta" element={<TipoCuentas />} />
+      <Route path="/tiposMoneda" element={<TiposMoneda />} />
+      <Route path="/Auxiliar" element={<Auxiliar />} />
     </Route>
   )
 );

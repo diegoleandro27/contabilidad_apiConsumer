@@ -11,7 +11,7 @@ const RegistroAsiento = () => {
   const [monedas, setMonedas] = useState([]);
   const navigate = useNavigate();
   // Define the server address
-  const server = "api-contabilidad.azurewebsites.net";
+  const server = "ap1-contabilidad.azurewebsites.net";
 
   /* These lines of code are constructing the URLs for making API requests to fetch different types of
     data related to accounting. The URLs are being constructed using the `server` variable which holds

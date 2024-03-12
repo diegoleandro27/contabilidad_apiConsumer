@@ -6,7 +6,7 @@ const AsientosContables = () => {
   const [asientosContables, setAsientosContables] = useState([]);
   // const [asientoId, setAsientoId] = useState(25);
 
-  const server = "api-contabilidad.azurewebsites.net";
+  const server = "ap1-contabilidad.azurewebsites.net";
 
   const URL_ENTRADA = `https://${server}/Contabilidad/ObtenerEntradaContablexAux?Id=1`;
 
