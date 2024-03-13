@@ -38,6 +38,7 @@ const TipoCuentas = () => {
         <td className="border px-4 py-2">{entradaContable.fecha}</td>
         <td className="border px-4 py-2">{entradaContable.monto}</td>
         <td className="border px-4 py-2">{entradaContable.estado}</td>
+        <td className="border px-4 py-2">{entradaContable.auxiliar}</td>
       </tr>
     );
   };
@@ -69,6 +70,7 @@ const TipoCuentas = () => {
               <th className="px-4 py-2">Fecha</th>
               <th className="px-4 py-2">Monto</th>
               <th className="px-4 py-2">Estado</th>
+              <th className="px-4 py-2">Auxiliar</th>
             </tr>
           </thead>
           <tbody>
