@@ -4,19 +4,28 @@ import { Link } from "react-router-dom";
 
 const AsientosContables = () => {
   const [asientosContables, setAsientosContables] = useState([]);
+  const [fechaFiltro, setFechaFiltro] = useState("");
   // const [asientoId, setAsientoId] = useState(25);
 
   const server = "ap1-contabilidad.azurewebsites.net";
 
-  const URL_ENTRADA = `https://${server}/Contabilidad/ObtenerEntradaContablexAux?Id=1`;
+  let URL_ENTRADA = `https://${server}/Contabilidad/ObtenerEntradaContablexAux?Id=1`;
 
   const fetchAsientosContables = async () => {
+    if (fechaFiltro) {
+      URL_ENTRADA += `&fecha=${fechaFiltro}`;
+    }
+
     try {
       const response = await axios.get(URL_ENTRADA);
       setAsientosContables(response.data.entradaContable);
     } catch (error) {
       console.error("Error fetching asientos contables:", error);
     }
+  };
+
+  const handleFechaChange = (event) => {
+    setFechaFiltro(event.target.value);
   };
 
   // const handleAsientoChange = (event) => {
@@ -33,7 +42,7 @@ const AsientosContables = () => {
 
   useEffect(() => {
     fetchAsientosContables();
-  }, []);
+  }, [fechaFiltro]);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -45,7 +54,19 @@ const AsientosContables = () => {
         >
           Crear Entrada Contable
         </Link>
+
+        <div className="mt-8">
+          <label>Filtro de busqueda: </label>
+          {/* Input para seleccionar la fecha */}
+          <input
+            type="date"
+            value={fechaFiltro}
+            onChange={handleFechaChange}
+            className=" border-gray-300 rounded-md text-black mx-3"
+          />
+        </div>
       </div>
+
       <div className="overflow-x-auto">
         <table className="w-full table-auto rounded-lg overflow-hidden">
           <thead className="bg-gray-200 dark:bg-gray-700 text-black">

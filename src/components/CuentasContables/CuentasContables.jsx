@@ -133,7 +133,7 @@ const CuentasContables = () => {
           </tbody>
         </table>
       </div>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <input
           type="text"
           placeholder="Descripción de la nueva cuenta"
@@ -147,7 +147,7 @@ const CuentasContables = () => {
         >
           Crear Nueva Cuenta Contable
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
