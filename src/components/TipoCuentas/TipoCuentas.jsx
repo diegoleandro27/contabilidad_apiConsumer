@@ -9,7 +9,7 @@ const TipoCuentas = () => {
     const fetchCuentasContables = async () => {
       try {
         const response = await axios.get(
-          "https://api-contabilidad.azurewebsites.net/Contabilidad/TiposCuenta"
+          "https://ap1-contabilidad.azurewebsites.net/Contabilidad/TiposCuenta"
         );
         setCuentasContables(response.data.cuentasContables);
       } catch (error) {
